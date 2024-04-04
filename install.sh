@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+#misty_rose = #FFDEDE
+#pastel_pink = #E5A3A1
+#celadon = #B4E3AD
+#medium_champagne = #ECE3B1
+#pale_cerulean = #A3CBE7
+#wisteria = #CEACE8
+#lavender_blue = #C9D4FF
+#dark_bg_1 = #1B1F23
+
 if [ ${UID} -eq 0 ]; then
   DEST_DIR="/usr/share/icons"
 else
@@ -8,7 +17,7 @@ fi
 
 readonly SRC_DIR=$(cd $(dirname $0) && pwd)
 
-readonly COLOR_VARIANTS=("standard" "black" "blue" "brown" "green" "grey" "orange" "pink" "purple" "red" "yellow" "manjaro" "ubuntu" "dracula" "nord")
+readonly COLOR_VARIANTS=("standard" "black" "blue" "brown" "green" "grey" "orange" "pink" "purple" "red" "yellow" "manjaro" "ubuntu" "dracula" "nord" "misty_rose" "pastel_pink" "celadon" "medium_champagne" "pale_cerulean" "wisteria" "lavender_blue")
 readonly BRIGHT_VARIANTS=("" "light" "dark")
 
 if command -v lsb_release &> /dev/null; then
@@ -50,6 +59,13 @@ COLOR VARIANTS:
   ubuntu                   Ubuntu default color folder version
   dracula                  Dracula default color folder version
   nord                     nord color folder version
+  misty_rose               Sweet Pastel Misty Rose color folder version
+  pastel_pink              Sweet Pastel Pastel Pink color folder version
+  celadon                  Sweet Pastel Celadon color folder version
+  medium_champagne         Sweet Pastel Medium Champagne color folder version
+  pale_cerulean            Sweet Pastel Pale Cerulean color folder version
+  wisteria                 Sweet Pastel Wisteria color folder version
+  lavender_blue            Sweet Pastel Lavender Blue color folder version
 
   By default, only the standard one is selected.
 EOF
@@ -101,6 +117,27 @@ install_theme() {
       ;;
     nord)
       local -r theme_color='#4d576a'
+      ;;
+    misty_rose)
+      local -r theme_color='#FFDEDE'
+      ;;
+    pastel_pink)
+      local -r theme_color='#E5A3A1'
+      ;;
+    celadon)
+      local -r theme_color='#B4E3AD'
+      ;;
+    medium_champagne)
+      local -r theme_color='#ECE3B1'
+      ;;
+    pale_cerulean)
+      local -r theme_color='#A3CBE7'
+      ;;
+    wisteria)
+      local -r theme_color='#CEACE8'
+      ;;
+    lavender_blue)
+      local -r theme_color='#C9D4FF'
       ;;
   esac
 
